@@ -1,0 +1,14 @@
+{
+  "name": "cyanoff-skills-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "cyanoff — skills for planning and design that differ from AI defaults.",
+  "license": "MIT",
+  "workspaces": ["packages/*"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "npm run build -w @cyanoff/skills",
+    "test": "npm run test -w @cyanoff/skills",
+    "smoke": "npm run smoke -w @cyanoff/skills"
+  }
+}

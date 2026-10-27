@@ -1,0 +1,23 @@
+{
+  "name": "@cyanoff/skills",
+  "version": "0.1.0",
+  "description": "Install, update and scaffold cyanoff agent skills for Claude Code and Cursor.",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "cyanoff": "dist/src/cli.js" },
+  "files": ["dist/src", "README.md"],
+  "engines": { "node": ">=20" },
+  "repository": { "type": "git", "url": "git+https://github.com/cyanoff/skills.git", "directory": "packages/cli" },
+  "keywords": ["skills", "agent-skills", "claude-code", "cursor", "cyanoff"],
+  "publishConfig": { "access": "public" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/",
+    "smoke": "npm run build && node scripts/smoke.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.6.0"
+  }
+}
